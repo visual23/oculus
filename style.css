@@ -1,0 +1,436 @@
+/*
+Theme Name: Oculus Plastic Surgery
+Theme URI: http://www.visual23.com
+Author: Visual23
+Author URI: http://www.visual23.com/
+Description: Hi, I am the ultra minimal starter theme oculus, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress.
+Version: 1.1.2
+License: GNU General Public License
+License URI: see license.txt
+Tags: coffee, nightshift
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
+the _s starter theme from Automattic, the guys behind WordPress.
+
+_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Twitter Bootstrap
+
+
+*/
+
+/* Import the necessary TK Bootstrap WP CSS additions 
+@import url( includes/css/bootstrap-wp.css );*/
+
+
+
+/* My Minimal WordPress Styling comes here */
+
+/* This is a small security for too long strings titles */
+body {
+	/*word-wrap: break-word;*/
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+}
+img[class*="wp-image-"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.wp-caption.aligncenter {
+	margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+.wp-caption .wp-caption-text {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.gallery dd {
+	margin: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.main-content-inner {
+	padding-bottom: 1.5em;
+}
+.hentry {
+	margin: 0px 0 1.5em;
+}
+
+
+/* Clearing */
+.clear {
+	clear: both;
+}
+
+.sidebar{
+    background-color:#c6e7f1;
+    
+}
+.sidebar .sidebar-padder{
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-right: 14px;
+}
+.page-header {
+  padding-bottom: 9px;
+  margin: 0px 0 0px;
+  border-bottom: 0;
+}
+
+.entry-meta{
+  padding-bottom: 9px;
+  margin: 0px 0 20px;
+  border-bottom: 0;
+}
+
+.page-title{
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    font-family: apolline-sc;
+    font-size: 28px;
+    text-align: left;
+}
+.page-title a{
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    font-family: apolline-sc;
+    font-size: 28px;
+    text-align: left;
+    text-decoration: none !important;
+    letter-spacing: 1.5px;
+}
+.topPostHeader{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.topPostHeader .page-title{
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    font-family: apolline-sc;
+    font-size: 40px;
+    text-align: left;
+}
+
+.posted-on{
+    font-family: apolline;
+    font-size: 22px;
+    color: #4a4a4a;
+}
+.posted-on a, .byline a{
+    color: #4a4a4a !important;
+    text-decoration: none !important;
+}
+
+.byline{
+    font-family: apolline;
+    font-size: 22px;
+    font-style: italic;
+    color: #4a4a4a;
+}
+
+.tags-links{
+    color:#7ec8e0;
+    font-family: apolline;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 22px;
+    display: block;
+    padding-top: 10px;
+}
+.tags-links a{
+    font-size: 18px;
+    color:#7ec8e0 !important;
+    font-family: brandon-grotesque !important;
+    text-decoration: none !important;
+    font-style: normal;
+}
+.tags-links a:hover{
+    text-decoration: underline !important;
+}
+
+.entry-content, .entry-summary{
+    font-size: 20px;
+}
+.main-content-inner{
+    padding-left: 30px;
+    padding-top: 40px;
+}
+div.pagination {
+		padding: 3px;
+		margin: 3px;
+		text-align:center;
+}
+
+div.pagination a, div.pagination span.pages, div.pagination span.dots, div.pagination span.current {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  border-radius: 0px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  margin: 1px 6px;
+  padding: 0px 0px;
+  display: inline-block;
+  border-top: 0;
+  text-decoration: none !important;
+  color: #4a4a4a !important;
+  font-size: smaller !important;
+
+  font-family: apolline;
+  text-shadow: none;
+  background-color: transparent;
+  background-image: none !important;
+    border-bottom: 1px solid #4a4a4a;
+}
+
+div.pagination a:hover, div.pagination a:focus {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none !important;
+}
+
+div.pagination span.current {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border-color: transparent !important;
+  color: #4a4a4a !important;
+  text-shadow: none;
+  background-color: transparent;
+  background-image: none !important;
+  text-decoration: none !important;
+}
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: 2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.widget_search .search-form input[type="submit"] { display: none; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+.widget-title{
+    font-family: brandon-grotesque;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+    font-size: 20px;
+    border-bottom: 2px solid #fff;
+}
+.widget .nav{
+    text-align: left;
+}
+.widget .nav li {
+position: relative;
+margin: 0;
+float: none;
+display: block;
+width: auto;
+text-align: left;
+height: auto;
+line-height: 20px !important;
+}
+.widget .nav li a {
+text-decoration: none;
+width: 100%;
+margin: 0;
+color: #4a4a4a;
+font-size: 18px;
+font-family: 'brandon-grotesque';
+    font-weight: 400;
+margin-right: 0px;
+margin-left: 0px;
+padding: 0;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-top: 6px;
+padding-bottom: 6px;
+margin-top: 0px;
+text-transform: none;
+letter-spacing: 1px;
+transition: all 0.2s ease-out;
+position: relative;
+}
+.widget .nav li a:hover {
+    color: #4a4a4a;
+    text-decoration: underline;
+}
+
+.pager li > a, .pager li > span {
+display: inline-block;
+padding: 5px 14px;
+background-color: transparent;
+border: 0;
+border-radius: 0px;
+    font-size: 20px;
+}
+
+
+/* Images */
+.entry-content img,
+.comment-content img,
+.widget img {
+    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
+}
+img.size-full {
+    max-width: 97.5%;
+    width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
+}
+.wp-caption { max-width: 100%;
+font-style: italic;
+font-family: apolline;
+font-size: 18px;
+}
+.wp-caption.alignleft{
+    float: left;
+}
+.wp-caption img{
+    padding-bottom: 10px;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ .comment .children { margin-left: 1.5em; }
+
+/*
+
+
+ == Quick CSS styling tips ==
+
+ You can start off in a rough direction with some minimal styles.
+ See below for some tips. ;)
+
+
+ == Want to have the whole site wrapped? ==
+
+ Just fill the .container class with some background color to have a the whole site "wrapped".
+ This works so easy because every main part is wrapped only once into a container class by bootstrap.
+ Try out by decommenting the next line and go from there.
+
+ .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+
+ == Want to wrap just the content and sidebar in Bootstrap style? ==
+
+ That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
+
+
+ == Infinite Scrolling by Jetpack ==
+ You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html..
+
+/* Globally hidden elements when Infinite Scroll is supported and in use.
+ * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
+
+/*
+.infinite-scroll .page-links,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+*/
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
+/*
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+*/
