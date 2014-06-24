@@ -26,14 +26,14 @@
 
        <div class="row colorBoxes">
            <a href="cosmetic/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor" id="cosmeticBox">
                 <h2>cosmetic</h2>
                 <?php echo get_field( 'cosmetic_description'); ?>
             </div>
         </div>
                </a>
-        <div class="col-md-6 nopadding colorBox">
+        <div class="col-md-6 col-sm-6 nopadding colorBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -45,7 +45,7 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 nopadding colorBox">
+            <div class="col-md-6 col-sm-6 nopadding colorBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -55,7 +55,7 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
             </div>
         </div>
             <a href="reconstructive/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor" id="reconstructiveBox">
                 <h2>reconstructive</h2>
                 <?php echo get_field( 'reconstructive_description'); ?>
@@ -66,14 +66,14 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
         
         <div class="row colorBoxes">
             <a href="non-surgical/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor" id="non-surgicalBox">
                 <h2>non-surgical</h2>
                 <?php echo get_field( 'non-surgical_description'); ?>
             </div>
         </div>
                 </a>
-        <div class="col-md-6 nopadding colorBox">
+        <div class="col-md-6 col-sm-6 nopadding colorBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -85,7 +85,7 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 nopadding colorBox">
+            <div class="col-md-6 col-sm-6 nopadding colorBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -95,7 +95,7 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
             </div>
         </div>
             <a href="skin-care/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor" id="skinCareBox">
                 <h2>skin care</h2>
                 <?php echo get_field( 'skin_care_description'); ?>
@@ -110,8 +110,3 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
 
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

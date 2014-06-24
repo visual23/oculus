@@ -24,7 +24,7 @@
 
        <div class="row colorBoxes">
            <a href="oculus/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor">
                 <img src="<?php echo get_field( 'oculus_image'); ?>">
                 <h2>oculus</h2>
@@ -32,7 +32,7 @@
             </div>
         </div>
                </a>
-        <div class="col-md-6 nopadding colorBox" id="oculusBox">
+        <div class="col-md-6 col-sm-6 nopadding colorBox" id="oculusBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
 <?php
@@ -56,7 +56,7 @@
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 nopadding colorBox" id="epionceBox">
+            <div class="col-md-6 col-sm-6 nopadding colorBox" id="epionceBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
  <?php
@@ -78,7 +78,7 @@
             </div>
         </div>
             <a href="epionce/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor">
                 <img src="<?php echo get_field( 'epionce_image'); ?>">
                 <h2>epionce</h2>
@@ -90,7 +90,7 @@
         
         <div class="row colorBoxes">
             <a href="jan-marini/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor">
                 <img src="<?php echo get_field( 'jan_marini_image'); ?>">
                 <h2>jan marini</h2>
@@ -98,7 +98,7 @@
             </div>
         </div>
                 </a>
-        <div class="col-md-6 nopadding colorBox" id="janMariniBox">
+        <div class="col-md-6 col-sm-6 nopadding colorBox" id="janMariniBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -122,7 +122,7 @@
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 nopadding colorBox" id="janeIredaleBox">
+            <div class="col-md-6 col-sm-6 nopadding colorBox" id="janeIredaleBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -144,7 +144,7 @@
             </div>
         </div>
             <a href="jane-iredale/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor">
                 <img src="<?php echo get_field( 'jane_iredale_image'); ?>">
                 <h2>jane iredale</h2>
@@ -156,7 +156,7 @@
         
         <div class="row colorBoxes">
             <a href="revision/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor">
                 <img src="<?php echo get_field( 'revision_image'); ?>">
                 <h2>revision</h2>
@@ -164,7 +164,7 @@
             </div>
         </div>
                 </a>
-        <div class="col-md-6 nopadding colorBox" id="revisionBox">
+        <div class="col-md-6 col-sm-6 nopadding colorBox" id="revisionBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
 <?php
@@ -188,7 +188,7 @@
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 nopadding colorBox" id="skinMedicaBox">
+            <div class="col-md-6 col-sm-6 nopadding colorBox" id="skinMedicaBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -210,7 +210,7 @@
             </div>
         </div>
             <a href="skin medica/">
-        <div class="col-md-6 nopadding colorBox colorBoxSymbol">
+        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
             <div class="colorBoxText colorBoxColor">
                 <img src="<?php echo get_field( 'skin_medica_image'); ?>">
                 <h2>skin medica</h2>
@@ -226,8 +226,3 @@
 
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

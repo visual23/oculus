@@ -30,7 +30,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
             <?php get_sidebar(); ?>
-			<div id="content" class="main-content-inner col-sm-12 col-md-9">
+			<div id="content" class="main-content-inner col-sm-9 col-md-9">
 
 	<?php if ( have_posts() ) : ?>
 

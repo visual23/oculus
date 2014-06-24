@@ -101,7 +101,7 @@ jQuery(window).load(function () {
         
         jQuery(window).bind('scroll',function(e) {
 
-            if (jQuery(window).width() > 979) {
+            if (isMobile != true) {
 
                 buffer_height = 80;
 
@@ -113,6 +113,7 @@ jQuery(window).load(function () {
                         up_count = 0;                        
                         
                         jQuery('#mainHeader').addClass('fixedHeader');
+                        jQuery('.contentContainer').css('paddingTop', '115px');
                     }
 
                 } else {
@@ -122,6 +123,7 @@ jQuery(window).load(function () {
                         down_count = 0;
                         
                         jQuery('#mainHeader').removeClass('fixedHeader');
+                        jQuery('.contentContainer').css('paddingTop', '160px');
                     }
                 }
             }
@@ -190,95 +192,38 @@ var mega_menu_open = false;
 var mega_menu_timeout;
 
 
-jQuery(document).ready(function() {  
+jQuery(document).ready(function($) {  
     
-    var $about_button = jQuery('#menu-item-17');
+    var $about_button = $('#menu-item-17');
     var about_position = $about_button.position();
     var left_space = about_position.left;
-    var menu_width = jQuery('#menu-menu-1').outerWidth();
+    var menu_width = $('#menu-menu-1').outerWidth();
     console.log('menu_width = '+menu_width)
     
-     if (jQuery('#formSection').length) {
-    //Calls the selectBoxIt method on your HTML select box.
-    jQuery("select").selectBoxIt({
+     if ($('#formSection').length) {
+        //Calls the selectBoxIt method on your HTML select box.
+        $("select").selectBoxIt({
 
-    // Hides the first select box option from appearing when the drop down is opened
-    defaultText: "please select one:",
-    dynamicPositioning: false
+        // Hides the first select box option from appearing when the drop down is opened
+        defaultText: "please select one:",
+        dynamicPositioning: false
 
-  });
-     }
+        });
+    }
     
     // disable the top link in the footer menus
-    jQuery('.footerMenu').each(function(){
-    var $t = jQuery(this).find('a').first();
-    $t.after($t.text());
-    $t.remove();
-});
-        
-    
-
-    // go through all links that have children and position the dropdown.
-   /* jQuery( ".menu-item-has-children.dropdown" ).each(function( i ) {
-        var $button = jQuery(this);
-        var position = $button.position();
-        var has_third_level = false;
-        // position menu
-        console.log('total = '+(position.left-menu_width/2+310))
-        if(jQuery(this).attr('id') == 'menu-item-17')
-        {
-            console.log('at 1')
-            $button.find('ul.dropdown-menu').first().css('left', 0-left_space);
-        }
-        else
-        {
-            $button.find('ul.dropdown-menu').first().css('left', '-'+(position.left)+'px');
-        }
-        
-        $button.find('ul.dropdown-menu').first().css('paddingTop', '60px');
-        $button.find('ul.dropdown-menu').first().css('paddingLeft', '170px');
-        $button.find('ul.dropdown-menu').first().css('width', jQuery('#topBarContainer').outerWidth());
-        
-        // if there's a submenu
-        if(jQuery(this).find('ul.dropdown-menu li').hasClass('dropdown-submenu'))
-        {
-            jQuery(this).find('ul.dropdown-menu li.dropdown-submenu').each(function( i ) {
-                // position the menu up top.
-                var $li = jQuery(this);
-                var li_position = $li.position();
-                jQuery(this).find('ul.dropdown-menu').css('top', '-'+(li_position.top+2)+'px');
-                jQuery(this).find('ul.dropdown-menu').css('left', '310px');
-                jQuery(this).find('ul.dropdown-menu').first().css('paddingTop', '60px');
-                
-                // set height 
-                jQuery(this).find('ul.dropdown-menu').css('height', jQuery(this).parent().outerHeight(true));
-               // console.log( "li_position: " + li_position.top )
-                has_third_level = true;
-               // console.log('has_third_level = '+has_third_level)
-                });            
-        }
-        
-        if(has_third_level == false)
-        {
-           // console.log('has_third_level2 = '+has_third_level)
-            // make the 1st ul.dropdown-menu width 620
-            jQuery(this).find('ul.dropdown-menu').addClass('wideMenu');
-            jQuery(this).find('ul.dropdown-menu li').css('border', 'none');
-        }
-        
-        //console.log( 'counting' )
-        
+    $('.footerMenu').each(function(){
+        var $t = jQuery(this).find('a').first();
+        $t.after($t.text());
+        $t.remove();
     });
-    */
+ 
     
-    // hide dropdowns
-    //jQuery('.dropdown-menu').css('display', 'none');
-    
-    jQuery('.dropdown').hover(
+    $('.dropdown').hover(
       function() {
           // clear timeout
           clearTimeout(mega_menu_timeout);
-        jQuery(this).find('.dropdown-menu').first().delay(100).fadeIn(300);
+        $(this).find('.dropdown-menu').first().delay(100).fadeIn(300);
 
           if (isMobile != true)
           {
@@ -286,7 +231,7 @@ jQuery(document).ready(function() {
           showMegaMenu(jQuery(this));
           }
       }, function() {
-        jQuery(this).find('.dropdown-menu').first().fadeOut('fast');
+        $(this).find('.dropdown-menu').first().fadeOut('fast');
           
          if (isMobile != true)
           {
@@ -296,7 +241,7 @@ jQuery(document).ready(function() {
           
       }
     );
-    jQuery('.dropdown a').first().hover(
+    $('.dropdown a').first().hover(
       function() {
           // clear timeout
           clearTimeout(mega_menu_timeout);
@@ -313,12 +258,12 @@ jQuery(document).ready(function() {
       
     
     
-    jQuery( "#searchBtn" ).click(function(event) {
+    $( "#searchBtn" ).click(function(event) {
       event.preventDefault();
         showSearchPanel();
     });
     
-    jQuery( "#searchBtnMobile" ).click(function(event) {
+    $( "#searchBtnMobile" ).click(function(event) {
       event.preventDefault();
         showSearchPanel();
     });
@@ -326,6 +271,11 @@ jQuery(document).ready(function() {
      jQuery( "#searchCloseBtn" ).click(function(event) {
       event.preventDefault();
         hideSearchPanel();
+    });
+    
+     jQuery( "#megaMenuCloseBtn" ).click(function(event) {
+      event.preventDefault();
+        hideMegaMenu();
     });
     
     
@@ -344,6 +294,96 @@ jQuery(window).load(function() {
 });
 }
 
+if (jQuery('#contact-form').length) {
+jQuery(document).ready(function() {
+    
+     jQuery('input').iCheck({
+    checkboxClass: 'icheckbox_minimal',
+    radioClass: 'iradio_minimal',
+    increaseArea: '20%' // optional
+  });
+    
+    jQuery('#contact-form').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The first name is required and cannot be empty'
+                    }
+                }
+            },
+            last_name: {
+                validators: {
+                    notEmpty: {
+                        message: 'The last name is required and cannot be empty'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: 'The email address is required'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address'
+                    }
+                }
+            },
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please enter a valid phone number'
+                    }
+                }
+            },
+            topic: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select a topic from the list'
+                    }
+                }
+            }
+        },
+        submitHandler: function(validator, form, submitButton) {
+            // Show loading image
+			jQuery('#loader').show();
+
+			// Submit data via AJAX
+			jQuery.ajax({
+				type: 'POST',
+				url: '<?php echo get_template_directory_uri(); ?>/includes/contact_form.php',
+				data: jQuery('#demo-form').serialize(),
+				dataType: 'json',
+				success: function( message ) {
+					//createCaptcha();
+
+					jQuery('#messages').append('<div class="alert alert-dissmisable alert-'+ message.type +'"><button type="button" id="formMessageClose" class="close">&times;</button> '+ message.content +'</div>').hide().fadeToggle('slow');
+                    jQuery( "#formMessageClose" ).click(function() {
+                       jQuery("#messages").hide();     // dismiss the dialog
+                    });
+				},
+				error: function( data ) {
+					//createCaptcha();
+
+					jQuery('#messages').append('<div class="alert alert-danger"><button type="button" class="close" id="formMessageClose">&times;</button><strong>Error:</strong> There has been an unknown error, please let us know immediately. Thank you.</div>').hide().fadeToggle('slow');
+                    jQuery( "#formMessageClose" ).click(function() {
+                       jQuery("#messages").hide();     // dismiss the dialog
+                    });
+				}
+			});
+
+			// Hide loading image
+			jQuery('#loader').hide();
+        }
+    });
+});
+}
 
 function showSearchPanel()
 {

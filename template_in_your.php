@@ -42,15 +42,6 @@ $row_count = 0;
 
  ?>  
     </div>
-</div>
-       
-
-
-
+</div> 
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

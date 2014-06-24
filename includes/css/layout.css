@@ -158,10 +158,6 @@ body {
     opacity: 0;
 }
 
-.fixedBuffer{
-    height: 160px;
-    display: block;
-}
 .mainNav {
     margin-top: 0;
 }
@@ -367,7 +363,10 @@ a.centerLink{
     -webkit-box-shadow: none; 
     -moz-box-shadow: none; 
     -o-box-shadow: none; 
-    zoom: 1;}
+    zoom: 1;
+    overflow: hidden;
+
+}
 
 /* Direction Nav */
 .flex-direction-nav a {width: 31px; height: 54px; margin: -20px 0 0; display: block; background: url('../images/arrows_sprite.png') no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;}
@@ -693,11 +692,13 @@ transition: all 0.8s ease-out;
     line-height: 40px;
     display: block;
     padding-bottom: 30px;
+    text-transform: lowercase;
 }
 .introTitle i{
     font-family: apolline;
     font-weight: 400;
     font-style: italic;
+    text-transform:none;
     
 }
 .introTitle.small{
@@ -708,6 +709,26 @@ transition: all 0.8s ease-out;
     line-height: 40px;
     display: block;
     padding-bottom: 30px;
+    text-transform: lowercase;
+}
+
+.searchTitle{
+    margin: 0;
+    font-family: apolline-sc;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 38px;
+    line-height: 40px;
+    display: block;
+    padding-bottom: 30px;
+    text-transform: lowercase;
+}
+.searchTitle span{
+    font-family: apolline;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: none;
+    font-size: 28px;
 }
 .subTitle{
     color: #70c2dd;
@@ -715,7 +736,7 @@ transition: all 0.8s ease-out;
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 50px;
-    line-height: 40px;
+    line-height: 50px;
     display: block;
     padding-bottom: 0px;
     padding-top: 20px;
@@ -1301,7 +1322,6 @@ header{
     position: absolute;
     z-index:23;
     width:100%;
-    height: 600px;
     display: none;
 }
 #megaMenu{
@@ -1326,7 +1346,20 @@ header{
     opacity: .6;
     display: none;
 }
-
+#megaMenuCloseBtn{
+    width:12px;
+    height: 16px;
+    position: absolute;
+    right: 15px;
+    top: -32px;
+    background-image: url(../images/closeX.png);
+    cursor: pointer;
+    text-indent: -9999px;
+    display: none;
+}
+body.tablet #megaMenuCloseBtn{
+   display: block;
+}
 #searchPanelWrapper{
     position: absolute;
     z-index:23;
@@ -1357,7 +1390,7 @@ header{
     height: 16px;
     position: absolute;
     right: 15px;
-    top: 0;
+    top: 15px;
     background-image: url(../images/closeX.png);
     cursor: pointer;
     text-indent: -9999px;
@@ -1581,7 +1614,9 @@ line-height: auto;
 
 
 /*** END FIXED MENU ***/
-
+.contentContainer{
+    padding-top:160px;
+}
 .contentContainer a{
     color:#231f20;
     text-decoration: underline;
@@ -2007,9 +2042,7 @@ footer .container{
     margin-right: 20px;
 }
 .footer-col:last-child{
-    width: 110px;
-    float: left;
-    margin-right: 0px;
+     margin-right: 0px;
 }
 .footer-col ul{
     margin: 0;
@@ -2035,6 +2068,9 @@ footer .container{
 }
 .footer-col li a {
     color:#fff;
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .footerBox{
@@ -2135,6 +2171,115 @@ footer .container{
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
     
+    .borderTitle {
+        border: 2px solid #c7e1e6;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-right: 80px;
+        padding-left: 80px;
+        width: auto;
+        height: auto;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        color: #4a4a4a;
+        font-weight: 500;
+        font-family: 'apolline-sc';
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-bottom: 36px;
+    }
+    
+    .centerTitle{
+        position: absolute;
+        top:20px;
+        left: 50%;
+        margin-left: -220px;
+        width:440px;
+        z-index: 2;
+        border: 2px solid #999999;
+        background: rgb(255, 255, 255); /* The Fallback */
+        background: rgba(255, 255, 255, 0.6);
+    }
+    
+    .extraWideTitle {
+        position: absolute;
+        top: 48px;
+        left: 50%;
+        margin-left: -250px;
+        width: 500px;
+        z-index: 2;
+        border: 2px solid #999999;
+        background: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, 0.6);
+    }
+    
+    .picBoxPadding>p{
+        padding-top:60px;
+    }
+    
+    .footer-col{
+         width: 14.28571428571429%;
+        float: left;
+        margin-right: 0px;
+    }
+    
+    .footer-col ul li{
+        line-height: 14px;
+        
+    }
+     .footer-col ul li a{
+        padding-top: 4px;
+         padding-bottom:4px;
+        
+    }
+    .footer-col li:first-child {
+       
+    }
+    
+    .picBoxText p {
+        font-family: 'apolline';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+    }
+    
+    .picBoxTextExtraPadding {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    
+    .colorBoxWhite {
+        padding: 40px;
+        text-align: left;
+        font-family: apolline;
+        font-weight: 400;
+        text-align: left;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    
+    .colorBoxWhite li{
+       margin: 0;
+        margin-left:10px;
+        padding: 0;
+        font-family: apolline-sc;
+        font-size: 20px;
+        text-transform: lowercase;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .colorBoxWhite li:before{
+       content: '>';
+        position: absolute;
+        left: 22px;
+        font-family: apolline-sc;
+        font-size: 28px;  
+        pointer-events: none;
+    }
+    
 }
 
 /* Extra Small Devices, Phones */ 
@@ -2142,10 +2287,7 @@ footer .container{
 #mainHeader{
        position: relative;
    }
-   .fixedBuffer{
-       display: none;
-   }
-    
+
     #topMenu .nav {
     margin: 0;
     text-align: left;

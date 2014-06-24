@@ -42,8 +42,3 @@
 
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

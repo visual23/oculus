@@ -3256,4 +3256,4 @@ selectBoxIt._destroySelectBoxIt = function() {
         return self;
 
     };
-})); // End of all modules
+}))(jQuery); // End of all modules

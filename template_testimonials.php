@@ -134,8 +134,3 @@ wp_reset_query();
 
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

@@ -26,7 +26,7 @@
             <div class="picBoxTitle darkGreyBG">dr. cole</div>
         </div>
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'dr._cole_text', 4); ?>
             </div>
             <div class="picBoxTitle darkGreyBG"><a href="<?php echo get_field( 'dr._cole_link', 4); ?>" class="readMore">read more</a>
@@ -35,17 +35,18 @@
     </div>
 
     <div class="row picGrid">
-        <div class="col-md-6 col-sm-6 nopadding picBox">
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding picBox">
+            <img src="<?php echo get_field( 'dr._cox_photo', 4); ?>">
+            <div class="picBoxTitle fadedPinkishBG">dr. cox</div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding picBox">
             <div class="picBoxText lightBlueBG">
                 <?php echo get_field( 'dr._cox_text', 4); ?>
             </div>
             <div class="picBoxTitle pinkishBG"><a href="<?php echo get_field( 'dr._cox_link', 4); ?>" class="readMore">read more</a>
             </div>
         </div>
-        <div class="col-md-6 col-sm-6 nopadding picBox ">
-            <img src="<?php echo get_field( 'dr._cox_photo', 4); ?>">
-            <div class="picBoxTitle fadedPinkishBG">dr. cox</div>
-        </div>
+        
     </div>
 
     <div class="row picGrid">
@@ -68,7 +69,7 @@
             <img src="<?php echo get_field( 'home_our_staff_photo', 4); ?>">
         </div>
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_our_staff_text', 4); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_our_staff_link', 4); ?>" class="readMore">read more</a>
@@ -79,7 +80,7 @@
     <div class="row picGrid">
         <h2 class="borderTitle centerTitle"><i>O</i>ur <i>F</i>acilities</h2> 
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_surgery_center_text', 4); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_surgery_center_link', 4); ?>" class="readMore">read more</a>
@@ -109,11 +110,4 @@
 
 <?php get_template_part( 'testimonials' ); ?>
 
-
-
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

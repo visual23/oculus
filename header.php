@@ -89,19 +89,19 @@
                                 <span class="icon-bar"></span>
                               </button>
                             </div>
-                        <div class="row visible-lg visible-md">
-                            <div class="col-md-4 text-left"><a href="https://oculusplasticsurgery.nextechweb.com/NexWebPortal510/PatientSummary.aspx" target="_blank" id="myAccountBtn">my account</a></div>
-                            <div class="col-md-4 text-center">
+                        <div class="row visible-lg visible-md visible-sm">
+                            <div class="col-md-4 col-sm-4 text-left"><a href="https://oculusplasticsurgery.nextechweb.com/NexWebPortal510/PatientSummary.aspx" target="_blank" id="myAccountBtn">my account</a></div>
+                            <div class="col-md-4 col-sm-4 text-center">
                                 <a id="oculusLogo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                                     <div class="oculusLogoType"><img src="<?php echo get_template_directory_uri(); ?>/includes/images/oculus_logo_type.png"></div>
                                     <div class="oculusLogoShape"><img src="<?php echo get_template_directory_uri(); ?>/includes/images/oculus_logo_shape.png"></div>
                                 </a>
                             </div>
-                            <div class="col-md-4 text-right"><span class="pull-right"><a href="#" id="searchBtn">search</a></span>
+                            <div class="col-md-4 col-sm-4 text-right"><span class="pull-right"><a href="#" id="searchBtn">search</a></span>
                             </div>
                         </div>
                 
-                        <div class="row hidden-lg hidden-md mobileTop">                            
+                        <div class="row visible-xs mobileTop">                            
                             
                             <div class="col-md-12 text-center">
                                 <a id="oculusLogo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -140,11 +140,11 @@
                     </div>
                 </div>
                     <div id="megaMenuWrapper">
-                        <div id="megaMenu"></div>
+                        <div id="megaMenu">
+                        <div id="megaMenuCloseBtn">Close</div></div>
                         <div id="megaMenuFade"></div>
                     </div>
             </header>
-        <div class="fixedBuffer"></div>
             <!-- End header -->
     
     <!-- Start Content -->

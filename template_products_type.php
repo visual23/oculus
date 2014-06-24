@@ -31,7 +31,7 @@
     while( the_repeater_field( 'products') ){
        
 
-        echo '<div class="col-md-4 text-center">';
+        echo '<div class="col-md-4 col-sm-4 text-center">';
         echo '<div class="productWrapper">';
         echo '<img src="'.get_sub_field('photo').'">';
         echo '<div class="productTitle">'.get_sub_field('title').'</div>';      
@@ -59,8 +59,3 @@
     </div>
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

@@ -36,8 +36,8 @@
     while( the_repeater_field( 'service_detail_block') ){
        
         echo '<div class="row">';
-        echo '<div class="col-md-4 text-right"><div class="seviceDetailBlockTitle">'.get_sub_field('title').'</div></div>';
-        echo '<div class="col-md-6 col-md-offset-1"><div class="seviceDetailBlockText">'.get_sub_field('text').'</div></div>';
+        echo '<div class="col-md-4 col-sm-4 text-right"><div class="seviceDetailBlockTitle">'.get_sub_field('title').'</div></div>';
+        echo '<div class="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1"><div class="seviceDetailBlockText">'.get_sub_field('text').'</div></div>';
         echo '</div> ';         
 			
 		$row_count++;
@@ -52,8 +52,3 @@
 
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

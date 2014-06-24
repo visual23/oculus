@@ -15,7 +15,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="row">
-        <div class="col-md-4 text-right">
+        
+        <?php if ( !is_search() ) : // Only display Excerpts for Search and Archive Pages ?>
+        <div class="col-md-4 col-sm-4 text-right">
             <?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php oculus_posted_on(); ?>
@@ -32,10 +34,17 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
         </div>
-        <div class="col-md-8">
+        
+        <div class="col-md-8 col-sm-8">
             <header class="page-header">
 		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
+        <?php else : ?>
+        
+        <div class="col-md-12 col-sm-12">
+            <header class="page-header">
+		<h1 class="page-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+                
+        <?php endif; ?>
 		
 	</header><!-- .entry-header -->
 

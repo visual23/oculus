@@ -24,7 +24,7 @@
     <div class="row picGrid">
         <h2 class="borderTitle centerTitle"><i>O</i>ur <i>F</i>acilities</h2> 
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_surgery_center_text', 4); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_surgery_center_link', 4); ?>" class="readMore">read more</a>
@@ -54,12 +54,4 @@
 
 <?php get_template_part( 'testimonials' ); ?>
 
-
-
-
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

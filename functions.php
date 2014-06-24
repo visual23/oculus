@@ -198,27 +198,13 @@ add_action( 'widgets_init', 'oculus_widgets_init' );
  * Enqueue scripts and styles
  */
 
-function my_init() {
-	if (!is_admin()) {
-		wp_deregister_script('jquery');
 
-		// load the local copy of jQuery in the footer
-		wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', false, '1.8.3', true);
-        wp_register_script('jquery-migrate', '/wp-includes/js/jquery/jquery-migrate.min.js', false, '1.2.1', true);
-        wp_register_script('jquery-ui', get_template_directory_uri() . '/includes/js-plugin/jquery-ui/jquery-ui-1.8.23.custom.min.js', false, '1.8.23', true);
-        
-
-		// or load the Google API copy in the footer
-		//wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', false, '1.8.3', true);
-
-		wp_enqueue_script('jquery');
-        wp_enqueue_script('jquery-migrate');
-        wp_enqueue_script('jquery-ui');
-	}
-}
-add_action('init', 'my_init');
 
 function oculus_scripts() {
+    
+    
+    //wp_enqueue_script('jquery-ui', get_template_directory_uri() . '/includes/js-plugin/jquery-ui/jquery-ui-1.8.23.custom.min.js', '', '', true);
+    
     
     // load modernizer
     wp_enqueue_script( 'modernizer', get_template_directory_uri() . '/includes/js/modernizr-2.6.1.min.js' );
@@ -245,22 +231,33 @@ function oculus_scripts() {
 	// load bootstrap wp js
 	wp_enqueue_script( 'oculus-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery'), '', true );
 
-	wp_enqueue_script( 'oculus-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
+	//wp_enqueue_script( 'oculus-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
+    
+    // contact form files
+    if ( is_page(323) ) { 
+        wp_register_script('jquery-ui-core', '/wp-includes/js/jquery/ui/jquery.ui.core.min.js', false, '', false);
+        wp_enqueue_script('jquery-ui-core');
+        wp_enqueue_style( 'minimal', get_template_directory_uri() . '/includes/js-plugin/icheck/skins/minimal/minimal.css', '', '', true  );    
+        wp_enqueue_script( 'bootstrap-validator', get_template_directory_uri() . '/includes/js/bootstrapValidator.min.js', array('jquery'), '', true );
+        wp_enqueue_script( 'icheck', get_template_directory_uri() . '/includes/js-plugin/icheck/icheck.min.js', array('jquery'), '', true );
+        wp_enqueue_script( 'select-box-it', get_template_directory_uri() . '/includes/js-plugin/jquery-selectboxit/javascripts/jquery.selectBoxIt.min.js', '', '', true );
+        wp_enqueue_style( 'selectBoxIt-css', get_template_directory_uri() . '/includes/js-plugin/jquery-selectboxit/stylesheets/jquery.selectBoxIt.css', '', '', true  );
+    }
     
     // theme specific files
     //wp_enqueue_script( 'smoothscroll', get_template_directory_uri() . '/includes/js-plugin/smoothscroll/SmoothScroll.js', array(), '', true );
     wp_enqueue_script( 'tweenmax', get_template_directory_uri() . '/includes/js-plugin/greensock/TweenMax.min.js', array(), '', true );
     wp_enqueue_script( 'uitotop', get_template_directory_uri() . '/includes/js-plugin/uitotop/jquery.ui.totop.min.js', array(), '', true );
     wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/includes/js-plugin/flexslider/jquery.flexslider.js', array(), '', true );
-    wp_enqueue_script( 'custom', get_template_directory_uri() . '/includes/js/custom.js', array(), '', true );
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/includes/js/custom.js', array('jquery' ), '', true );
     wp_enqueue_script( 'animation', get_template_directory_uri() . '/includes/js/animation.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+		//wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'oculus-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		//wp_enqueue_script( 'oculus-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
 }
@@ -321,6 +318,7 @@ function testimonials(){
       'capability_type' => 'post',
       'hierarchical' => false,
       'rewrite' => array('slug' => ''),
+      'exclude_from_search' => true,
       //'rewrite' => array('with_front' => false, 'slug' => 'press'),
       'query_var' => true,
       'has_archive' => true,

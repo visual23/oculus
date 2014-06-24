@@ -17,8 +17,8 @@ $row_count = 0;
         echo '<div class="privacyPolicyBlockContainer" style="background-color: '.$bg_color_array[$row_count].';">';
         echo '<div class="container">';
         echo '<div class="row">';
-        echo '<div class="col-md-4 text-right privacyPolicyBlockLeft">'.get_sub_field( 'title').'</div>';
-        echo '<div class="col-md-7 privacyPolicyBlockRight">'.get_sub_field( 'information').'</div>';    
+        echo '<div class="col-md-4 col-sm-4 text-right privacyPolicyBlockLeft">'.get_sub_field( 'title').'</div>';
+        echo '<div class="col-md-7 col-sm-7 privacyPolicyBlockRight">'.get_sub_field( 'information').'</div>';    
         echo '</div>';
         echo '</div>';
         echo '</div>';
@@ -28,15 +28,5 @@ $row_count = 0;
  }	
 
 		  ?>  
-        
-       
-
-
-
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>

@@ -57,7 +57,7 @@
             <div class="picBoxTitle darkGreyBG">dr. cole</div>
         </div>
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'dr._cole_text'); ?>
             </div>
             <div class="picBoxTitle darkGreyBG"><a href="<?php echo get_field( 'dr._cole_link'); ?>" class="readMore">read more</a>
@@ -97,7 +97,7 @@
     <div class="row picGrid">
         <h2 class="borderTitle centerTitle"><i>R</i>ead <i>D</i>r. cole</h2> 
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'read_dr._cole_text'); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'read_dr._cole_link'); ?>" class="readMore">read more</a>
@@ -114,7 +114,7 @@
             <img src="<?php echo get_field( 'home_our_staff_photo'); ?>">
         </div>
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_our_staff_text'); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_our_staff_link'); ?>" class="readMore">read more</a>
@@ -125,7 +125,7 @@
     <div class="row picGrid">
         <h2 class="borderTitle centerTitle"><i>O</i>ur <i>F</i>acilities</h2> 
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_surgery_center_text'); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_surgery_center_link'); ?>" class="readMore">read more</a>
@@ -154,7 +154,7 @@
     <div class="row picGrid">
         <h2 class="borderTitle centerTitle"><i>O</i>ur <i>P</i>roducts</h2> 
         <div class="col-md-6 col-sm-6 nopadding picBox">
-            <div class="picBoxText lightBlueBG">
+            <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_our_products_text'); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_our_products_link'); ?>" class="readMore">read more</a>
@@ -197,8 +197,3 @@
 </div>
 
 <?php get_footer() ?>
-
-<!-- add page specific js here -->
-</body>
-
-</html>
