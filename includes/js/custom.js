@@ -17,15 +17,8 @@ try {
     }
 }
 
-var isMobile;
 var isTouch = Modernizr.touch;
 var isIE = false;
-
-if (Modernizr.mq('only all and (max-width: 979px)')) {
-    isMobile = true;
-} else {
-    isMobile = false;
-}
 
 var ie = (function () {
 
@@ -108,12 +101,6 @@ jQuery(window).load(function () {
         
         jQuery(window).bind('scroll',function(e) {
 
-            if (Modernizr.mq('only all and (max-width: 979px)')) {
-                isMobile = true;
-            } else {
-                isMobile = false;
-            }
-            
             if (jQuery(window).width() > 979) {
 
                 buffer_height = 80;
@@ -165,13 +152,6 @@ jQuery(window).load(function () {
                     }
                 });
             }
-
-        var isMobile = false;
-
-        if (Modernizr.mq('only all and (max-width: 1024px)')) {
-            isMobile = true;
-        }
-
 
        /* if (isMobile === false) {
             $(window).stellar({
@@ -299,8 +279,8 @@ jQuery(document).ready(function() {
           // clear timeout
           clearTimeout(mega_menu_timeout);
         jQuery(this).find('.dropdown-menu').first().delay(100).fadeIn(300);
-          
-          if (isMobile == false)
+
+          if (isMobile != true)
           {
           // show mega menu
           showMegaMenu(jQuery(this));
@@ -308,7 +288,7 @@ jQuery(document).ready(function() {
       }, function() {
         jQuery(this).find('.dropdown-menu').first().fadeOut('fast');
           
-         if (isMobile == false)
+         if (isMobile != true)
           {
           // hide mega menu
           mega_menu_timeout = setTimeout('hideMegaMenu()', 500);
@@ -319,9 +299,8 @@ jQuery(document).ready(function() {
     jQuery('.dropdown a').first().hover(
       function() {
           // clear timeout
-          clearTimeout(mega_menu_timeout);       
-          console.log('rolling over a');
-          if (isMobile == false)
+          clearTimeout(mega_menu_timeout);
+          if (isMobile != true)
           {
           // show mega menu
           showMegaMenu(jQuery(this).parent());

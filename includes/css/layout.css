@@ -26,7 +26,7 @@ float: left;
 width: 100%;
 }
 .navbar-collapse.collapse{
-    padding-bottom: 14px;
+    padding-bottom: 0px;
 }
 .navbar-collapse.in {
  
@@ -2121,155 +2121,25 @@ footer .container{
 
 /*** MEDIA QUERIES ***/
 
-@media (max-width: 767px) {
-    #nav-toggle,
-    .interior #nav-toggle {
-        display: block;
-    }
-    #resMainMenu {
-        /*position:absolute;
-	z-index:10;
-	top:0;*/
-    }
-    #resMainMenu,
-    #resMainMenu ul,
-    #resMainMenu ul li {
-        list-style: none;
-        width: auto;
-        display: block;
-        float: none !important;
-    }
-    .jsNav #resMainMenu {
-        clip: rect(0 0 0 0);
-        max-height: 0;
-        position: absolute;
-        display: block;
-        overflow: hidden;
-        zoom: 1;
-    }
-    #resMainMenu.opened {
-        max-height: 9999px;
-        margin-bottom: 1em;
-        margin-top: 80px;
-        margin-left: 0px;
-        margin-right: 0px;
-        display: block;
-    }
-    #resMainMenu.closed {
-        margin-bottom: 1em;
-        margin-top: 80px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    #resMainMenu.opened ul,
-    #resMainMenu.closed ul {
-        margin-left: 0;
-    }
-    #resMainMenu.opened ul li a {
-        font-family: "Neue Helvetica W02", sans-serif;
-        font-size: 20px;
-        color: #fff;
-        text-decoration: none;
-        width: auto;
-        border: none;
-        padding: 0 0;
-        margin-top: 0;
-        text-indent: 0px;
-        display: block;
-        -webkit-text-size-adjust: none;
-        line-height: 40px;
-    }
-    #resMainMenu.closed ul li a {
-        font-family: "Neue Helvetica W02", sans-serif;
-        font-size: 20px;
-        color: #fff;
-        text-decoration: none;
-        width: auto;
-        border: none;
-        padding: 0 0;
-        margin-top: 0;
-        text-indent: 0px;
-        display: block;
-        -webkit-text-size-adjust: none;
-        line-height: 40px;
-    }
-    .interior #resMainMenu.opened ul li a {
-        font-family: "Neue Helvetica W02", sans-serif;
-        font-size: 20px;
-        color: #ff4000;
-        text-decoration: none;
-        width: auto;
-        border: none;
-        padding: 0 0;
-        margin-top: 0;
-        text-indent: 0px;
-        display: block;
-        -webkit-text-size-adjust: none;
-        line-height: 40px;
-    }
-    .interior #resMainMenu.closed ul li a {
-        font-family: "Neue Helvetica W02", sans-serif;
-        font-size: 20px;
-        color: #ff4000;
-        text-decoration: none;
-        width: auto;
-        border: none;
-        padding: 0 0;
-        margin-top: 0;
-        text-indent: 0px;
-        display: block;
-        -webkit-text-size-adjust: none;
-        line-height: 40px;
-    }
-    #resMainMenu.opened ul li a:hover {
-        padding: 0;
-        border: none;
-    }
-    #mainHeader .span12 {
-        height: auto;
-    }
-    #mainHeader .span12.opened {
-        background-color: #42b2e6;
-        margin-bottom: 0;
-        height: 80px;
-    }
-    #mainHeader .span12.closed {
-        background-color: transparent;
-        margin-bottom: 0;
-        height: 80px;
-    }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
 }
-/* Large desktop */
 
-@media (min-width: 1200px) {}
-/* ==========================================================================
-   Media Queries for Responsive Design.
-   ========================================================================== */
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+ 
+}
 
-@media (min-width: 960px) {
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
     
 }
-/* iPads (landscape) ----------- */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    
-}
-/* #Tablet (Portrait)
-================================================== */
-
-/* Note: Design for a width of 768px */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    
-    
-}
-/*  #Mobile (Portrait)
-================================================== */
-
-/* Note: Design for a width of 320px */
-
-@media screen and (max-width: 767px) {
-   #mainHeader{
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+#mainHeader{
        position: relative;
    }
    .fixedBuffer{
@@ -2366,25 +2236,25 @@ background-clip: padding-box;
     }
     
     .borderTitle {
-border: 2px solid #c7e1e6;
+        border: 2px solid #c7e1e6;
         text-align: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-right: 10px;
-    padding-left: 10px;
-    width: auto;
-    height: auto;
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-    color: #4a4a4a;
-    font-weight: 500;
-    font-family: 'apolline-sc';
-    font-size: 36px;
-    letter-spacing: 2px;
-    margin-bottom: 36px;
-            margin-right: 0px;
-            margin-left: 0px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: auto;
+        height: auto;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        color: #4a4a4a;
+        font-weight: 500;
+        font-family: 'apolline-sc';
+        font-size: 36px;
+        letter-spacing: 2px;
+        margin-bottom: 36px;
+         margin-right: 0px;
+        margin-left: 0px;
     }
     
     .centerTitle {
@@ -2413,11 +2283,13 @@ border: 2px solid #c7e1e6;
     .mobile-float-none{
         float: none;
     }
+   
 }
-/* #Mobile (Landscape)
-================================================== */
 
-/* Note: Design for a width of 480px */
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+	
+}
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
 

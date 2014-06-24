@@ -56,8 +56,8 @@
     
     <script>
     videojs.options.flash.swf = "<?php echo get_template_directory_uri(); ?>/includes/js-plugin/videojs/video-js.swf";
-    var isMobile;
-    var isTablet;
+    var isMobile = false;
+    var isTablet = false;
     <?php 
     if ( is_mobile() ) {
        echo 'isMobile = true;';
