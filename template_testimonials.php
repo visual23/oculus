@@ -57,7 +57,17 @@ if( $my_query->have_posts() ) {
         if($video_count == 0)
         {
             //
-            echo '<div class="col-md-6 col-sm-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
+            
+            
+            echo '<div class="col-md-6 col-sm-6 col-sm-push-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
+            echo '<div class="testimonialBoxText">';
+            echo get_field( 'testimonial_text');
+            echo '<hr class="testimonalHR"/>';
+            echo '<span class="testimonialPagePerson">watch '.get_the_title($post->ID).'</span>';            
+            echo '</div>';
+            echo '</div>';
+            
+            echo '<div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
             echo '<div class="testimonialVideo">';
             echo '<video id="example_video_1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="'.get_field( 'video_poster_image').'" data-setup=\'{"example_option":true}\'>';
             echo '<source src="'.get_field( 'mp4_video').'" type="video/mp4" />';
@@ -66,19 +76,11 @@ if( $my_query->have_posts() ) {
             echo '</div>';
             echo '</div>';
             
-            echo '<div class="col-md-6 col-sm-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
-            echo '<div class="testimonialBoxText">';
-            echo get_field( 'testimonial_text');
-            echo '<hr class="testimonalHR"/>';
-            echo '<span class="testimonialPagePerson">watch '.get_the_title($post->ID).'</span>';            
-            echo '</div>';
-            echo '</div>';
-            
             $video_count++;
         }
         else
         {
-            echo '<div class="col-md-6 col-sm-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
+           echo '<div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
             echo '<div class="testimonialBoxText">';
             echo get_field( 'testimonial_text');
             echo '<hr class="testimonalHR"/>';
@@ -86,9 +88,9 @@ if( $my_query->have_posts() ) {
             echo '</div>';
             echo '</div>';
             
-            echo '<div class="col-md-6 col-sm-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
+            echo '<div class="col-md-6 col-sm-6 col-sm-push-6 nopadding testimonialBox" style="background-color: '.$bg_color_array[$bg_color_count].';">';
             echo '<div class="testimonialVideo">';
-            echo '<video id="example_video_1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="'.get_field( 'video_poster_image').'"   data-setup=\'{"example_option":true}\'>';
+            echo '<video id="example_video_1" class="video-js vjs-default-skin" controls preload="auto" width="auto" height="auto" poster="'.get_field( 'video_poster_image').'" data-setup=\'{"example_option":true}\'>';
             echo '<source src="'.get_field( 'mp4_video').'" type="video/mp4" />';
             echo '<source src="'.get_field( 'webm_video').'" type="video/webm" />';
             echo '</video>';      

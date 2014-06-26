@@ -24,7 +24,9 @@ margin: 0 0 0px 0;
 padding-bottom: 0px;
 float: left;
 width: 100%;
+    max-height: auto;
 }
+
 .navbar-collapse.collapse{
     padding-bottom: 0px;
 }
@@ -299,8 +301,8 @@ a.centerLink{
 }
 .homeQuoteHolder{
     background-color: #e2f3f8;
-     width: 400px;
-    height: 360px;
+     width: 100%;
+    height: 100%;
     padding-top: 160px;
     padding-left: 40px;
     padding-right: 40px;
@@ -350,6 +352,20 @@ a.centerLink{
       font-size:16px;
       margin: 0px;
 } 
+
+/* breakpoint_1 */
+body:after { display: none; content: 'breakpoint_1'; }
+.flexslider {  margin : 0 auto; }
+
+/* breakpoint_2 */
+@media all and (min-width: 480px) {
+  body:after { display: none; content: 'breakpoint_2'; }
+}
+/* breakpoint_3 */
+@media all and (min-width: 720px) {
+  body:after { display: none; content: 'breakpoint_3'; }
+}
+
 .flexslider {
     margin: 0px; 
     background-color:transparent;
@@ -369,13 +385,24 @@ a.centerLink{
 }
 
 /* Direction Nav */
-.flex-direction-nav a {width: 31px; height: 54px; margin: -20px 0 0; display: block; background: url('../images/arrows_sprite.png') no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;}
+.flex-direction-nav a {width: 31px; height: 54px; margin: -20px 0 0; display: block; background: url('../images/arrows_sprite.png') no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent:inherit; opacity: 0; -webkit-transition: all .3s ease;
+text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
 .flex-direction-nav .flex-next {background-position: 100% 0; right: -50px; }
 .flex-direction-nav .flex-prev {left: -50px;}
 .flexslider:hover .flex-next {opacity: 0.8; right: 15px;}
 .flexslider:hover .flex-prev {opacity: 0.8; left: 15px;}
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;}
 .flex-direction-nav .disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+.flex-direction-nav a.flex-next:before, .flex-direction-nav a.flex-prev:before {
+content: '\f002';
+    display: none;
+}
+
 
 .postBlocks{
     background-color: #b7e0ee;
@@ -432,6 +459,11 @@ a.centerLink{
     font-weight: 400;
     font-size:20px;
 }
+.postBoxTitle a{
+    text-decoration: none !important;
+    color: #231f20;
+}
+
 .postBoxExcerpt{
     font-family: apolline;
     display: block;
@@ -445,6 +477,9 @@ a.centerLink{
     font-weight: 400;
     font-size:20px;
     font-style: italic;
+}
+.postBoxTitleQuote p{
+   margin-bottom: 0;
 }
 .postBoxFaceChange{
     display: inline-block;
@@ -670,7 +705,7 @@ transition: all 0.8s ease-out;
     position: relative;
 }
 .introText p{
-    margin-bottom: 0;
+   
 }
 
 .withBorder:after{
@@ -777,7 +812,7 @@ transition: all 0.8s ease-out;
     padding-top: 58px;
     padding-bottom: 58px;  
 }
-.lightBlueIntro .introTitle{
+/*.lightBlueIntro .introTitle{
     font-family: apolline;
     font-weight: 400;
     font-style: italic;
@@ -795,7 +830,7 @@ transition: all 0.8s ease-out;
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 30px;
-}
+}*/
 
 .faqContainer{
     padding-top: 54px;
@@ -951,12 +986,8 @@ a.readMore{
 color: #231f20;
 }
 .colorBoxText{
-    text-align: center;
-    min-height: 10em;
-    height: inherit;
-    width: inherit;
-    display: table-cell;
-    vertical-align: middle;
+    text-align: center;    
+    
     padding: 70px;  
 }
 
@@ -974,6 +1005,9 @@ color: #231f20;
 }
 .colorBoxColor{
    padding: 30px; 
+    display: table-cell;
+vertical-align: middle;
+width: inherit;
 }
 
 .colorBoxWhite ul{
@@ -1035,10 +1069,16 @@ color: #231f20;
     text-transform: lowercase;
     letter-spacing: 2px;
     line-height: 42px;
+    
+    
+text-align: center;
    
 }
 .colorBoxSymbol{
     min-height: 450px;
+    display: table;
+vertical-align: middle;
+
 }
 #cosmeticBox{
     background-color: #e2f3f8;
@@ -1066,6 +1106,11 @@ color: #231f20;
 }
 a.servicesSubListLink{
     color: #231f20;
+    text-decoration: none;
+   
+}
+a.servicesSubListLink:hover{
+     text-decoration: none;
    
 }
 a.servicesSubListLink:hover>.servicesSubList{
@@ -1617,10 +1662,6 @@ line-height: auto;
 .contentContainer{
     padding-top:160px;
 }
-.contentContainer a{
-    color:#231f20;
-    text-decoration: underline;
-}
 
 .inYourBlockContainer{
     padding-top: 54px;
@@ -1810,6 +1851,9 @@ hr.testimonalHR{
     padding-top: 40px;
     padding-bottom: 40px;
 }
+.staffColumn{
+    text-align: right;
+}
 .teamName{
     font-family: apolline-sc;
     font-size: 26px;
@@ -1852,6 +1896,7 @@ hr.testimonalHR{
     text-transform: lowercase;
     line-height: 28px;
     padding-top: 6px;
+    text-align: right;
 }
 .visitUsBlockLeft i, .visitUsBlockLeft em{
     font-size: 28px;
@@ -2284,10 +2329,24 @@ footer .container{
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-#mainHeader{
+    body {
+    line-height: 1.543;
+    font-size: 20px;
+    font-family: "apolline";
+    font-style: normal;
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #231f20;
+    }
+    #mainHeader{
        position: relative;
    }
-
+    .contentContainer {
+        padding-top: 0px;
+    }
     #topMenu .nav {
     margin: 0;
     text-align: left;
@@ -2312,28 +2371,28 @@ padding-bottom: 10px;
     }
     
     .dropdown-menu {
-position: static;
-float: none;
-width: auto;
-margin-top: 0;
-        top:100%;
-left: auto;
-z-index: 1000;
-display: none;
-min-width: auto;
-padding: 5px 0;
-padding-top: 0px;
-margin: 2px 0 0;
-font-size: 14px;
-list-style: none;
-background-color: transparent;
-border: none;
-border-radius: 0;
--webkit-box-shadow: none;
-box-shadow: none;
--webkit-background-clip: padding-box;
-background-clip: padding-box;
-}
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+            top:100%;
+    left: auto;
+    z-index: 1000;
+    display: none;
+    min-width: auto;
+    padding: 5px 0;
+    padding-top: 0px;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    }
     
     .dropdown-menu::before{
         content: '';
@@ -2369,8 +2428,12 @@ background-clip: padding-box;
         border: 0;
     }
     
-    #megaMenuWrapper{
-        
+    .introText {
+    height: auto;
+    background-color: #e9e9e9;
+    padding-top: 26px;
+    padding-bottom: 40px;
+    position: relative;
     }
     
     .borderTitleWide {
@@ -2392,11 +2455,22 @@ background-clip: padding-box;
         color: #4a4a4a;
         font-weight: 500;
         font-family: 'apolline-sc';
-        font-size: 36px;
+        font-size: 30px;
         letter-spacing: 2px;
-        margin-bottom: 36px;
+        margin-bottom: 26px;
          margin-right: 0px;
         margin-left: 0px;
+    }
+    .extraWideTitle {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        margin-left: -160px;
+        width: 320px;
+        z-index: 2;
+        border: 2px solid #999999;
+        background: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, 0.6);
     }
     
     .centerTitle {
@@ -2412,6 +2486,9 @@ background-clip: padding-box;
         margin-right: 0px;
             margin-left: 0px;
     }
+    .picBoxPadding>p{
+        padding-top:0px;
+    }
     .picBoxTitle{
         font-size: 24px;
     }
@@ -2425,7 +2502,462 @@ background-clip: padding-box;
     .mobile-float-none{
         float: none;
     }
-   
+    
+    .homeQuoteHolder {
+        padding-top: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: block;
+        float: left;
+        position: relative;
+    }
+    .postBlocks {
+    background-color: #b7e0ee;
+    padding-top: 0px;
+    padding-bottom: 34px;
+    }
+    .postBlockContainer{
+        padding-left:15px;
+        padding-right: 15px;
+    }
+    
+    .postBoxText span {
+    display: block;
+    padding: 20px;
+    }
+    
+    .contactBar a {
+    border: 2px solid #fff;
+    display: inline-block;
+    width: 80%;
+    color: #231f20;
+    font-family: apolline-sc;
+    font-size: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .footerBox {
+margin-top: 0px;
+padding-top: 22px;
+padding-bottom: 22px;
+        margin-left: 15px;
+        margin-right: 15px;
+border: 1px solid #fff;
+color: #fff;
+font-size: 14px;
+font-family: brandon-grotesque;
+}
+    
+    .introTitle {
+        font-family: apolline-sc;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 24px;
+        line-height: 30px;
+        display: block;
+        padding-bottom: 26px;
+        text-transform: lowercase;
+    }
+    .introTitle i{
+        font-family: apolline;
+        font-weight: 400;
+        font-style: italic;
+        text-transform:none;
+
+    }
+    .introTitle.small{
+        font-family: apolline-sc;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 44px !important;
+        line-height: 40px;
+        display: block;
+        padding-bottom: 10px;
+        text-transform: lowercase;
+    }
+    
+    .colorBoxColor i, .colorBoxColor em{
+        font-family: apolline;
+        font-weight: 400;
+        font-style: italic;
+        text-align: left;
+        line-height: 26px;
+        font-size: 24px;
+        text-align: left;
+         display: block;
+        margin: 0 auto;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .colorBox{
+        position: relative;
+    }
+
+
+    .colorBox h2{
+        position: relative;
+        margin: 0px;
+        padding: 0;
+        font-family: apolline-sc;
+        font-size: 34px;
+        text-transform: lowercase;
+        letter-spacing: 2px;
+        line-height: 32px;
+
+    }
+    
+    .picGrid .picBoxTitle {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    }
+    .picBoxText p:first-child {
+        margin-top: 10px;
+    }
+    .picBoxTextExtraPadding {
+        padding:25px;
+        
+    }
+    .staffRows {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .staffColumn{
+        text-align: left;
+    }
+    
+    #oculusTeam .row, #plasticSurgeryTeam .row, #skinCenterTeam .row{
+        padding-bottom: 20px;
+    }
+    
+    .testimonialBoxText {
+        text-align: center;
+        color: #231f20;
+        text-align: center;
+        height: auto;
+        width: inherit;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 20px;
+        font-size: 18px;
+        font-style: italic;
+    }
+    
+    .testimonialPagePerson {
+        font-family: apolline-sc;
+        text-transform: lowercase;
+        font-size: 22px;
+    }
+    
+    .colorBoxSymbol {
+    min-height: 100%;
+    }
+    
+    .colorBoxColor{
+        
+    }
+    
+    #cosmeticBox, #reconstructiveBox, #non-surgicalBox, #skinCareBox{
+    height: 340px;
+    }
+    
+    .whiteIntro {
+    height: auto;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+    
+    .subTitle{
+        color: #70c2dd;
+        font-family: apolline;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 40px;
+        line-height: 40px;
+        display: block;
+        padding-bottom: 0px;
+        padding-top: 10px;
+    }
+    .subTitle span{
+        font-family: apolline-sc;
+        font-size: 36px;
+    }
+    .subTitle i{
+        font-style: italic;
+        font-size: 36px;
+    }
+    
+    .serviceDetailContent .text-right{
+        text-align: left;        
+    }
+    .serviceDetailContent .row{
+        padding-bottom: 20px       
+    };
+    
+    .whiteIntro{
+        height:auto;
+        background-color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;  
+    }
+    .whiteIntro .introTitle{
+        font-family: apolline-sc;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 30px;
+        line-height: 28px;
+        display: block;
+        padding-bottom: 10px;
+    }
+    .whiteIntro .introTitle i, .whiteIntro .introTitle em{
+        font-family: apolline;
+        font-weight: 400;
+        font-style: italic;
+
+    }
+
+    .lightBlueIntro{
+        height:auto;
+        background-color: #daece8;
+        padding-top: 20px;
+        padding-bottom: 20px;  
+    }
+    /*.lightBlueIntro .introTitle{
+        font-family: apolline;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 30px;
+         line-height: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+    .lightBlueIntro .introTitle span{
+        display: inline-block;
+        font-family: apolline-sc;
+        font-style: normal;
+        text-transform: lowercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 30px;
+    }*/
+    .servicesSubListTitleWrapper {
+    min-height: 10em;
+    height: 100%;
+    width: inherit;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 0px;
+        padding-top: 10px;
+    position: relative;
+    }
+    .servicesSubListTitle {
+    font-family: apolline-sc;
+    font-size: 24px;
+    text-align: left !important;
+    position: relative;
+    }
+    .servicesSubListTitle:after {
+        content: '';
+        position: absolute;
+        width: 19px;
+        height: 23px;
+        margin-top: -12px;
+        top: 50%;
+        right: -40px;
+        background-image: url(../images/services_arrow_sprite.png);
+        background-position: 0 0;
+    }
+    
+    .servicesSubListCopyWrapper {
+    min-height: 10em;
+    height: 100%;
+    width: inherit;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 0px;
+        padding-bottom: 20px;
+    }
+    .servicesSubListTitleWrapper:after {
+    content: '';
+    display: none;
+    }
+    
+    .servicesSubListTitleWrapper{
+        padding-bottom: 0;
+    }
+    
+    .productWrapper {
+    padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .productDetails {
+    font-size: 18px;
+    font-family: apolline-sc;
+    line-height: 16px;
+    height: auto;
+    text-transform: lowercase;
+    }
+    .colorBoxText{
+        text-align: center;
+
+        padding: 20px;  
+    }
+    
+    .visitUsBlockContainer{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .visitUsBlockLeft{
+        font-size: 26px;
+        font-family: apolline-sc;
+        text-transform: lowercase;
+        line-height: 30px;
+        padding-top: 6px;
+        text-align: left;
+    }
+    .visitUsBlockLeft i, .visitUsBlockLeft em{
+        font-size: 24px;
+        font-family: apolline;
+        text-transform:none;
+    }
+
+    .visitUsBlockRight{
+        font-size: 16px;
+        font-family: apolline;
+        line-height: 22px;
+    }
+
+    .visitUsBlockRight h3{
+        font-weight: 400;
+        font-size: 18px;
+        font-family: apolline;
+        line-height: 16px;
+        margin-bottom: 6px;
+    }
+    .visitUsAddress{
+        font-size: 20px;
+        font-family: apolline;
+        line-height: 22px;
+    }
+    .visitUsAddress a{
+        color:#231f20;
+        text-decoration: none;
+    }
+    
+    .stayConnectedWrapper .form-control {
+    color: #303030;
+    width: 240px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .stayConnectedWrapper .btn-stay-connected{
+        margin: 0 auto;
+    }
+    .hentry .text-right{
+        text-align: left;
+    }
+    
+    .searchTitle{
+        margin: 0;
+        font-family: apolline-sc;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 32px;
+        line-height: 36px;
+        display: block;
+        padding-bottom: 30px;
+        text-transform: lowercase;
+    }
+    .searchTitle span{
+        font-family: apolline;
+        font-weight: 400;
+        font-style: italic;
+        text-transform: none;
+        font-size: 28px;
+    }
+    .privacyPolicyBlockContainer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .privacyPolicyBlockContainer .text-right{
+        text-align: left;
+    }
+    .contactBar {
+    background-color: #d4edf5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    }
+     .inYourBlockContainer .text-right{
+        text-align: left;
+    }
+    .inYourBlockContainer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .faqContainer {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .faqRow{
+        padding-bottom: 16px;
+    }
+    .faqQuestion{
+        font-family: apolline-sc;
+        font-size: 26px;
+        text-transform: lowercase;
+        line-height: 30px;
+    }
+    .faqAnswer{
+        font-family: apolline;
+        font-size: 20px;
+        display: inline-block;
+        padding-left: 10px;
+        padding-top: 12px;
+    }
+    .questionQ{
+        font-style: italic;
+        font-family: apolline;
+        font-size: 26px;
+        display: inline-block;
+        padding-right: 0px;
+        text-transform: uppercase;
+    }
+    
+    .colorBoxWhite ul li {
+    text-align: left;
+    }
+    
+    .colorBoxWhite li{
+       margin: 0;
+        margin-left:26px;
+        padding: 0;
+        font-family: apolline-sc;
+        font-size: 20px;
+        line-height: 22px;
+        text-transform: lowercase;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .colorBoxWhite li:before{
+       content: '>';
+        position: absolute;
+        left: 22px;
+        font-family: apolline-sc;
+        font-size: 28px;  
+        pointer-events: none;
+    }
 }
 
 /* Custom, iPhone Retina */ 

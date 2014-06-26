@@ -26,7 +26,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
             <?php get_sidebar(); ?>
-			<div id="content" class="main-content-inner col-sm-12 col-md-8">
+			<div id="content" class="main-content-inner col-sm-8 col-md-8">
 
 	<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
 	<div class="content-padder">

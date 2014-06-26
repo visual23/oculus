@@ -28,7 +28,7 @@
 </div>
 <footer>
     <div class="container">
-        <div class="row">
+        <div class="row hidden-sm hidden-xs">
             <div class="footer-col">
                 <?php about_menu(); ?>
             </div>

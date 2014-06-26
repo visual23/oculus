@@ -56,7 +56,16 @@
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 col-sm-6 nopadding colorBox" id="epionceBox">
+            <a href="epionce/">
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding colorBox colorBoxSymbol">
+            <div class="colorBoxText colorBoxColor">
+                <img src="<?php echo get_field( 'epionce_image'); ?>">
+                <h2>epionce</h2>
+                <?php echo get_field( 'epionce_description'); ?>
+            </div>
+        </div> 
+                </a>
+            <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding colorBox" id="epionceBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
  <?php
@@ -77,15 +86,7 @@
 </ul>
             </div>
         </div>
-            <a href="epionce/">
-        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
-            <div class="colorBoxText colorBoxColor">
-                <img src="<?php echo get_field( 'epionce_image'); ?>">
-                <h2>epionce</h2>
-                <?php echo get_field( 'epionce_description'); ?>
-            </div>
-        </div> 
-                </a>
+            
     </div>
         
         <div class="row colorBoxes">
@@ -122,7 +123,16 @@
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 col-sm-6 nopadding colorBox" id="janeIredaleBox">
+            <a href="jane-iredale/">
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding colorBox colorBoxSymbol">
+            <div class="colorBoxText colorBoxColor">
+                <img src="<?php echo get_field( 'jane_iredale_image'); ?>">
+                <h2>jane iredale</h2>
+                <?php echo get_field( 'jane_iredale_description'); ?>
+            </div>
+        </div> 
+                </a>
+            <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding colorBox" id="janeIredaleBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -143,15 +153,7 @@
 </ul>
             </div>
         </div>
-            <a href="jane-iredale/">
-        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
-            <div class="colorBoxText colorBoxColor">
-                <img src="<?php echo get_field( 'jane_iredale_image'); ?>">
-                <h2>jane iredale</h2>
-                <?php echo get_field( 'jane_iredale_description'); ?>
-            </div>
-        </div> 
-                </a>
+            
     </div>
         
         <div class="row colorBoxes">
@@ -188,7 +190,16 @@
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 col-sm-6 nopadding colorBox" id="skinMedicaBox">
+            <a href="skin medica/">
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding colorBox colorBoxSymbol">
+            <div class="colorBoxText colorBoxColor">
+                <img src="<?php echo get_field( 'skin_medica_image'); ?>">
+                <h2>skin medica</h2>
+                <?php echo get_field( 'skin_medica_description'); ?>
+            </div>
+        </div> 
+                </a>
+            <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding colorBox" id="skinMedicaBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -209,15 +220,7 @@
 </ul>
             </div>
         </div>
-            <a href="skin medica/">
-        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
-            <div class="colorBoxText colorBoxColor">
-                <img src="<?php echo get_field( 'skin_medica_image'); ?>">
-                <h2>skin medica</h2>
-                <?php echo get_field( 'skin_medica_description'); ?>
-            </div>
-        </div> 
-                </a>
+            
     </div>
         
         

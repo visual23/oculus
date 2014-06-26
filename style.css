@@ -139,6 +139,7 @@ object {
 
 .sidebar{
     background-color:#c6e7f1;
+    padding-bottom: 10px;
     
 }
 .sidebar .sidebar-padder{
@@ -230,6 +231,10 @@ object {
 .main-content-inner{
     padding-left: 30px;
     padding-top: 40px;
+}
+.main-content-inner a{
+    color: #231f20;
+    text-decoration: underline;
 }
 div.pagination {
 		padding: 3px;

@@ -18,7 +18,7 @@ $row_count = 0;
         echo '<div class="visitUsBlockContainer" style="background-color: '.$bg_color_array[$row_count].';">';
         echo '<div class="container">';
         echo '<div class="row">';
-        echo '<div class="col-md-4 col-sm-4 text-right visitUsBlockLeft">'.get_sub_field( 'title').'</div>';
+        echo '<div class="col-md-4 col-sm-4 visitUsBlockLeft">'.get_sub_field( 'title').'</div>';
         if($row_count == 0 || $row_count == 1)
         {
             echo '<div class="col-md-8 col-sm-8 visitUsBlockRight visitUsAddress">'.get_sub_field( 'information').'</div>';

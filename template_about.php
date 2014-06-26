@@ -78,18 +78,18 @@
     </div>
 
     <div class="row picGrid">
-        <h2 class="borderTitle centerTitle"><i>O</i>ur <i>F</i>acilities</h2> 
-        <div class="col-md-6 col-sm-6 nopadding picBox">
+        <h2 class="borderTitle centerTitle"><i>O</i>ur <i>F</i>acilities</h2>
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding picBox ">
+            <img src="<?php echo get_field( 'home_surgery_center_photo', 4); ?>">
+            <div class="picBoxTitle fadedPinkishBG">surgery center</div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding picBox">
             <div class="picBoxText lightBlueBG picBoxPadding">
                 <?php echo get_field( 'home_surgery_center_text', 4); ?>
             </div>
             <div class="picBoxTitle fadedPinkishBG"><a href="<?php echo get_field( 'home_surgery_center_link', 4); ?>" class="readMore">read more</a>
             </div>
-        </div>
-        <div class="col-md-6 col-sm-6 nopadding picBox ">
-            <img src="<?php echo get_field( 'home_surgery_center_photo', 4); ?>">
-            <div class="picBoxTitle fadedPinkishBG">surgery center</div>
-        </div>
+        </div>        
     </div>
 
     <div class="row picGrid">

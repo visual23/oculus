@@ -45,7 +45,16 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 col-sm-6 nopadding colorBox">
+            
+            <a href="reconstructive/">
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding colorBox colorBoxSymbol">
+            <div class="colorBoxText colorBoxColor" id="reconstructiveBox">
+                <h2>reconstructive</h2>
+                <?php echo get_field( 'reconstructive_description'); ?>
+            </div>
+        </div> 
+                </a>
+            <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding colorBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -54,14 +63,6 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
 </ul>
             </div>
         </div>
-            <a href="reconstructive/">
-        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
-            <div class="colorBoxText colorBoxColor" id="reconstructiveBox">
-                <h2>reconstructive</h2>
-                <?php echo get_field( 'reconstructive_description'); ?>
-            </div>
-        </div> 
-                </a>
     </div>
         
         <div class="row colorBoxes">
@@ -85,7 +86,16 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
     </div>
         
         <div class="row colorBoxes">
-            <div class="col-md-6 col-sm-6 nopadding colorBox">
+            
+            <a href="skin-care/">
+        <div class="col-md-6 col-sm-6 col-sm-push-6 nopadding colorBox colorBoxSymbol">
+            <div class="colorBoxText colorBoxColor" id="skinCareBox">
+                <h2>skin care</h2>
+                <?php echo get_field( 'skin_care_description'); ?>
+            </div>
+        </div> 
+                </a>
+            <div class="col-md-6 col-sm-6 col-sm-pull-6 nopadding colorBox">
             <div class="colorBoxText colorBoxWhite">
                 <ul>
   <?php
@@ -94,14 +104,6 @@ wp_list_pages("title_li=&child_of=49&show_date=modified
 </ul>
             </div>
         </div>
-            <a href="skin-care/">
-        <div class="col-md-6 col-sm-6 nopadding colorBox colorBoxSymbol">
-            <div class="colorBoxText colorBoxColor" id="skinCareBox">
-                <h2>skin care</h2>
-                <?php echo get_field( 'skin_care_description'); ?>
-            </div>
-        </div> 
-                </a>
     </div>
         
         

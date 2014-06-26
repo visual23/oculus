@@ -29,7 +29,7 @@
     while( the_repeater_field( 'oculus_team_member') ){
        
         echo '<div class="row">';   
-        echo '<div class="col-md-3 col-sm-3 text-right"><span class="teamName">'.get_sub_field('name').'</span><span class="teamTitle">'.get_sub_field('job_title').'</span></div>';
+        echo '<div class="col-md-3 col-sm-3 staffColumn"><span class="teamName">'.get_sub_field('name').'</span><span class="teamTitle">'.get_sub_field('job_title').'</span></div>';
         echo '<div class="col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1"><span class="teamDescription">'.get_sub_field('description').'</span></div>';
         echo '</div>';
 			
@@ -52,7 +52,7 @@
     while( the_repeater_field( 'plastic_surgery_team_member') ){
        
         echo '<div class="row">';   
-        echo '<div class="col-md-3 col-sm-3 text-right"><span class="teamName">'.get_sub_field('name').'</span><span class="teamTitle">'.get_sub_field('job_title').'</span></div>';
+        echo '<div class="col-md-3 col-sm-3 staffColumn"><span class="teamName">'.get_sub_field('name').'</span><span class="teamTitle">'.get_sub_field('job_title').'</span></div>';
         echo '<div class="col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1"><span class="teamDescription">'.get_sub_field('description').'</span></div>';
         echo '</div>';
 			
@@ -75,7 +75,7 @@
     while( the_repeater_field( 'skin_center_team_member') ){
        
         echo '<div class="row">';   
-        echo '<div class="col-md-3 col-sm-3 text-right"><span class="teamName">'.get_sub_field('name').'</span><span class="teamTitle">'.get_sub_field('job_title').'</span></div>';
+        echo '<div class="col-md-3 col-sm-3 staffColumn"><span class="teamName">'.get_sub_field('name').'</span><span class="teamTitle">'.get_sub_field('job_title').'</span></div>';
         echo '<div class="col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1"><span class="teamDescription">'.get_sub_field('description').'</span></div>';
         echo '</div>';
 			

@@ -1,5 +1,6 @@
 <div id="homeQuotes">
         <h2 class="borderTitle extraWideTitle"><i>W</i>hat <i>O</i>ur <i>P</i>atients <i>S</i>ay</h2>
+       <div class="flexslider-container">
         <div class="flexslider">
             <ul class="slides">
                 <?php
@@ -36,7 +37,7 @@ if( $my_query->have_posts() ) {
     echo '<div class="homeQuoteHolder" style="background-color: '.$bg_color_array[$bg_color_count].';">';
     echo '<blockquote class="homeQuote">';
     echo get_field( 'testimonial_text');
-    echo '<p>'.get_the_title($post->ID).'</p>';
+    echo '<p>&mdash; '.get_the_title($post->ID).'</p>';
     echo '</blockquote>';
     echo '</div>';
     echo '</li>';
@@ -55,6 +56,6 @@ wp_reset_query();
 ?>
                 
             </ul>
-
+         </div>
         </div>
     </div>
